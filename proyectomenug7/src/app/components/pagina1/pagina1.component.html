@@ -1,1 +1,39 @@
-<p>testing</p>
+<div class="container">
+  <h1>Asignar Propuestas de Tesis</h1>
+  
+  <div class="form-group">
+    <label for="idRevisor">Número de Identificación del Revisor:</label>
+    <input 
+      type="number" 
+      id="idRevisor" 
+      class="form-control" 
+      placeholder="Ingresa el número de identificación" 
+      [max]="9999999999" 
+      [min]="0000000000">
+  </div>
+
+  <div class="form-group">
+    <label for="archivo">Subir Archivo de Propuesta:</label>
+    <input type="file" id="archivo" class="form-control" />
+  </div>
+
+  <div class="revisores-lista">
+    <h3>Revisores Disponibles:</h3>
+    <ul>
+      <li>Revisor 1 - ID: 1234567890</li>
+      <li>Revisor 2 - ID: 9876543210</li>
+      <li>Revisor 3 - ID: 1122334455</li>
+      <li>Revisor 4 - ID: 6677889900</li>
+    </ul>
+  </div>
+
+  
+  <div class="form-group">
+    <button class="btn btn-primary" (click)="asignarPropuesta()">Asignar Propuesta</button>
+  </div>
+
+  
+  <div *ngIf="mensajeVisible" class="alert alert-success">
+    Propuesta asignada con éxito.
+  </div>
+</div>
