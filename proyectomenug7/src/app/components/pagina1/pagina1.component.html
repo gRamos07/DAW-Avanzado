@@ -1,39 +1,69 @@
-<div class="container">
-  <h1>Asignar Propuestas de Tesis</h1>
-  <h2> Autor: Pedro Gabriel Ramos Baque</h2>
-  <div class="form-group">
-    <label for="idRevisor">Número de Identificación del Revisor:</label>
-    <input 
-      type="number" 
-      id="idRevisor" 
-      class="form-control" 
-      placeholder="Ingresa el número de identificación" 
-      [max]="9999999999" 
-      [min]="0000000000">
-  </div>
+<div class="container mat-elevation-z4">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Asignar Propuestas de Tesis</mat-card-title>
+      <mat-card-subtitle>Autor: Pedro Gabriel Ramos Baque</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <!-- ID del Revisor -->
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Número de Identificación del Revisor</mat-label>
+          <input 
+            matInput 
+            type="number" 
+            placeholder="Ingresa el número de identificación"
+            [max]="9999999999" 
+            [min]="0" />
+        </mat-form-field>
 
-  <div class="form-group">
-    <label for="archivo">Subir Archivo de Propuesta:</label>
-    <input type="file" id="archivo" class="form-control" />
-  </div>
+        <!-- Subir Archivo -->
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Archivo de Propuesta</mat-label>
+          <input matInput [value]="nombreArchivo" readonly />
+        </mat-form-field>
+        <button 
+          mat-raised-button 
+          color="primary" 
+          (click)="seleccionarArchivo()" 
+          class="full-width">
+          Seleccionar Archivo
+        </button>
+        <input 
+          type="file" 
+          id="archivoInput" 
+          hidden 
+          (change)="archivoSeleccionado($event)" />
+        
+        <!-- Lista de Revisores -->
+        <div class="revisores-lista">
+          <h3>Revisores Disponibles:</h3>
+          <mat-list>
+            <mat-list-item 
+              *ngFor="let revisor of ['Msc. Silvia Tejada Yepez - ID: 1234567890', 'Mgs. Johanna Zumba Gamboa - ID: 9876543210', 'Dra. Gabriel Rodriguez Morejon - ID: 1122334455', 'Msc. Jenny Ortiz Zambrano - ID: 6677889900']">
+              {{ revisor }}
+            </mat-list-item>
+          </mat-list>
+        </div>
 
-  <div class="revisores-lista">
-    <h3>Revisores Disponibles:</h3>
-    <ul>
-      <li>Revisor 1 - ID: 1234567890</li>
-      <li>Revisor 2 - ID: 9876543210</li>
-      <li>Revisor 3 - ID: 1122334455</li>
-      <li>Revisor 4 - ID: 6677889900</li>
-    </ul>
-  </div>
+        <!-- Botón Asignar -->
+        <div class="form-group">
+          <button 
+            mat-raised-button 
+            color="accent" 
+            class="full-width" 
+            (click)="asignarPropuesta()">
+            Asignar Propuesta
+          </button>
+        </div>
+      </form>
 
-  
-  <div class="form-group">
-    <button class="btn btn-primary" (click)="asignarPropuesta()">Asignar Propuesta</button>
-  </div>
-
-  
-  <div *ngIf="mensajeVisible" class="alert alert-success">
-    Propuesta asignada con éxito.
-  </div>
+      <!-- Mensaje de Confirmación -->
+      <mat-card *ngIf="mensajeVisible" class="alert mat-card">
+        <mat-card-content>
+          Propuesta asignada con éxito.
+        </mat-card-content>
+      </mat-card>
+    </mat-card-content>
+  </mat-card>
 </div>
