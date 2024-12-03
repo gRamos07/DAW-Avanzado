@@ -1,0 +1,8 @@
+nav a:hover {
+    color: white; /* Cambia solo el color del texto al pasar el cursor */
+    background-color: transparent; /* Asegura que el fondo no cambie */
+}
+
+.bg-body-tertiary {
+    background-color: rgb(28, 136, 208) !important; 
+}
