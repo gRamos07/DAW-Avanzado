@@ -1,13 +1,14 @@
-<div class="container">
+<div class="mat-typography mat-elevation-z1 mat-background">
+  <div class="container">
     <h2>ESTADO DE LAS PROPUESTAS</h2>
     
     <!-- Sección de búsqueda-->
     <div class="search">
       <label for="cedula">Búsqueda:</label>
-      <input type="text" id="cedula" placeholder="Ingrese el número de cédula">
+      <input matInput type="text" id="cedula" placeholder="Ingrese el número de cédula">
     </div>
   
-    <table>
+    <table mat-table>
       <thead>
         <tr>
           <th>ID</th>
@@ -23,22 +24,23 @@
           <td>0958591620</td> 
           <td>Corregir ortografía</td>
           <td>Pendiente</td>
-          <td><input type="file"></td>
+          <td><input matInput type="file"></td>
         </tr>
         <tr>
           <td>2</td>
           <td>0574168543</td> 
           <td>Ajustar formato</td>
           <td>Completado</td>
-          <td><input type="file"></td>
+          <td><input matInput type="file"></td>
         </tr>
         <tr>
           <td>3</td>
           <td>0975841698</td> 
           <td>Revisar datos</td>
           <td>En proceso</td>
-          <td><input type="file"></td>
+          <td><input matInput type="file"></td>
         </tr>
       </tbody>
     </table>
   </div>
+</div>
