@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 titulo = 'Proyecto Grupo 7'
-integrantes = ['Freire Vera Josue Anibal', 'Ramos Baque Pedro Gabriel'];
+integrantes = ['Erazo Vizuete Justin Alexander', 'Ramos Baque Pedro Gabriel', 'Torres Beltran Aaron Ignacio'];
 }
