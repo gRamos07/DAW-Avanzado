@@ -1,0 +1,55 @@
+:host {
+    background-color: rgba(114, 214, 231, 0.8); 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-row-height {
+    height: 80vh; /* Ajusta esta altura según tus necesidades */
+}
+
+.inner-content {
+    width: 100%;
+    max-width: 600px; /* Ajustar el ancho máximo del contenedor interno */
+    min-height: 50vh; /* Ajustar la altura mínima del contenedor interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+.mat-form-field {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+    
+h3 {
+    margin-bottom: 1rem;
+    text-align: center; 
+    width: 100%;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
