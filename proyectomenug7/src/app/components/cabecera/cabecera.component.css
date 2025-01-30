@@ -4,7 +4,7 @@ nav a:hover {
 }
 
 .bg-body-tertiary {
-    background-color: rgb(28, 136, 208) !important; 
+    background-color: #8fe0ee!important; 
 }
 
 a{
@@ -15,7 +15,9 @@ a{
 .navbar-nav {
     flex: 1;
 }
-
+.navbar-nav .nav-item{
+    margin-left: 20px;
+}
 .navbar-nav .nav-item:last-child {
     margin-left: auto;
 }
