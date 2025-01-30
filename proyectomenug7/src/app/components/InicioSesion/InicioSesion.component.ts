@@ -1,10 +1,11 @@
-import { Component, } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -29,10 +30,11 @@ export class InicioSesionComponent {
     {email: 'Juanito@ug.com', password: 'student', role: 'estudiante'},
     {email: 'Maria@ug.com', password: 'secretary', role: 'secretaria'},
   ]
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
   IniciarSesion() {
     const user = this.users.find(u => u.email === this.email && u.password === this.password);
     if (user) {
+      this.authService.login();
       this.router.navigate(['/home']);
     } else {
       alert('Usuario y/o contraseña incorrectos');
