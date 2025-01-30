@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "proyectomenug7",
   "version": "0.0.0",
   "scripts": {
@@ -46,9 +45,3 @@
     "typescript": "~5.5.2"
   }
 }
-=======
-  "dependencies": {
-    "bootstrap": "^5.3.3"
-  }
-}
->>>>>>> 09e073d90afb598a2c6a34e9c7a246ed4d18c6f5
