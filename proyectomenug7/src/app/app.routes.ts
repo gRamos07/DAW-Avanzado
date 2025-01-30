@@ -3,6 +3,7 @@ import { HomeComponent } from './components/inicio/inicio.component';
 import { Pagina1Component } from './components/pagina1/pagina1.component';
 import { Pagina2Component } from './components/pagina2/pagina2.component';
 import { Pagina3Component } from './components/pagina3/pagina3.component';
+import { InicioSesionComponent } from './components/InicioSesion/InicioSesion.component';
 
 export const routes: Routes =  [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -10,5 +11,6 @@ export const routes: Routes =  [
     { path: 'pagina1', component: Pagina1Component },
     { path: 'pagina2', component: Pagina2Component },
     { path: 'pagina3', component: Pagina3Component },
+    { path: 'InicioSesion', component: InicioSesionComponent },
     { path: '**', redirectTo: 'home', pathMatch: 'full' },
   ];
