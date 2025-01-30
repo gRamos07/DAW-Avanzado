@@ -17,7 +17,16 @@ a{
 }
 .navbar-nav .nav-item{
     margin-left: 20px;
+    text-transform: uppercase;
 }
 .navbar-nav .nav-item:last-child {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.navbar-nav .nav-item:last-child img {
+    margin-left: 8px; /* Ajusta el margen según sea necesario */
+    width: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
+    border-radius: 50%; /* Ajusta el radio de borde según sea necesario */
 }
