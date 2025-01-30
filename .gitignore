@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
@@ -40,3 +41,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+=======
+taller_leccion_filtro_paginacion
+>>>>>>> 09e073d90afb598a2c6a34e9c7a246ed4d18c6f5

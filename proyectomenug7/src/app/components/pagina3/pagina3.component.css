@@ -1,0 +1,16 @@
+.container {
+    max-width: 600px;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .card-header h4 {
+    margin: 0;
+  }
+  
+  .btn {
+    border-radius: 5px;
+  }
+  
